@@ -1,0 +1,43 @@
+
+@media (max-width: 900px) {
+    #page_home {
+        background-position-x: 70vw;
+    }
+
+    #page_home .content {
+        align-items: center;
+        text-align: center;
+    }
+
+    #page_home header a {
+        position: absolute;
+        bottom: 40px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    #page_home main {
+        align-items: center;
+        max-width: 580px;
+    }
+
+    #page_home main h1 {
+        font-size: 46px;
+    }
+
+    #page_home main p {
+        font-size: 22px;
+    }
+}
+
+@media (min-width: 1720px) {
+    #page_home {
+        background-position-x: 40vw;
+    }
+}
+
+@media (max-height: 760px) {
+    #page_home {
+        background-position-y: 100px;
+    }
+}

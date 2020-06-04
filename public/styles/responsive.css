@@ -61,6 +61,15 @@
     }
 }
 
+@media (max-width: 400px) {
+    #page-create-point form button {
+        width: 200px;
+
+        padding: 0 8px;
+    }
+
+}
+
 @media (max-width: 480px) {
     #modal .content {
         width: 320px;
@@ -74,5 +83,63 @@
 
     #modal .header h1 {
         font-size: 28px;
+    }
+}
+
+@media (max-width: 750px) {
+    #page-create-point form .field-group {
+        flex-direction: column;
+    }
+
+    #page-create-point .field-group .field + .field {
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 630px) {
+    #page-create-point .items-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    #page-create-point .items-grid li span {
+        font-size: 24px;
+    }
+
+    #page-create-point form legend {
+        flex-direction: column;
+    }
+
+    #page-create-point form legend h2 {
+        font-size: 32px;
+
+        margin-bottom: 16px;
+    }
+
+    #page-create-point form legend span {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 510px) {
+    #page-create-point .items-grid {
+        grid-template-columns: 1fr;
+    }
+
+    #page-create-point .items-grid li span {
+        font-size: 24px;
+    }
+
+    #page-create-point form legend {
+        flex-direction: column;
+    }
+
+    #page-create-point form legend h2 {
+        font-size: 32px;
+
+        margin-bottom: 16px;
+    }
+
+    #page-create-point form legend span {
+        font-size: 18px;
     }
 }

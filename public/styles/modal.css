@@ -91,6 +91,7 @@
     border-radius: 0 8px 8px 0;
     border: 0;
     cursor: pointer;
+    outline: none;
 }
 
 #modal form button:hover {

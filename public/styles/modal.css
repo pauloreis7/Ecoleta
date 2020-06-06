@@ -97,3 +97,22 @@
 #modal form button:hover {
     filter: brightness(108%);
 }
+
+/* MODAL POINT-CREATED */
+
+#modal.point .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#modal.point .content h1 {
+    color: white;
+    font-size: 40px;
+
+    margin-top: 32px;
+}
+
+#modal.point .content img {
+    width: 120px;
+}

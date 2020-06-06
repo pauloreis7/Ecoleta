@@ -74,6 +74,15 @@
     #modal .content {
         width: 320px;
     }
+
+    #modal.point .content h1 {
+        font-size: 28px;
+    }
+
+    #modal.point .content img {
+        width: 90px;
+    }
+
 }
 
 @media (max-width: 380px) {

@@ -165,13 +165,19 @@
 
     {% block modal %}
 
-            {% if saved %}
-            
-                {% include "partials/point-created.html" %}
+        {% if saved %}
+        
+            {% include "partials/point-created.html" %}
 
-            {% endif %}
-            
-        {% endblock %}
+        {% endif %}
+
+        {% if saved == false %}
+        
+            {% include "partials/point-failed.html" %}
+
+        {% endif %}
+
+    {% endblock %}
 
     {% block scripts %}
 

@@ -61,7 +61,7 @@ module.exports = db
     //Consultar dados da tabela
     // db.all(`SELECT * FROM places`, function (err, rows) {
     //     if (err) {
-    //         return console.log(err)
+    //        return console.log(err)
     //     }
 
     //     console.log("Aqui estão seus registros")
@@ -69,28 +69,14 @@ module.exports = db
     // })
 
     //Deletar dados da tabela
-    //  db.run(`DELETE FROM places WHERE id = ?`, [3], function (err) {
-    //      if (err) {
-    //          return console.log(err)
-    //      }
+      // db.run(`DELETE FROM places WHERE id = ?`,  function (err) {
+      //   if (err) {
+      //     return console.log(err)
+      //   }
 
-    //      console.log("Registro deletado com sucesso!")
-    //  })
+      //   console.log("Registro deletado com sucesso!")
+      // })
 
 })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 //Obs: Quando uma função reside dentro de um objeto da-se o nome de método

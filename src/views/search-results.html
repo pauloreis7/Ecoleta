@@ -39,8 +39,22 @@
                             <p>
                                 {{ place.city }}, {{ place.state }} <br />
                                 {{ place.adress }} <br />
-                                {{ place.adress2 }}
+                                Número {{ place.adress2 }}
                             </p>
+
+                            <div class="edit_content">
+
+                                <a href="/edit">
+                                    <span></span>
+                                    Editar local
+                                </a>
+
+                                <a href="/delete">
+                                    Deletar
+                                    <span></span>
+                                </a>
+
+                            </div>
 
                         </article>
 
@@ -55,5 +69,11 @@
             <h4><strong>Nenhum</strong> ponto de coleta encontrado :(</h4>
 
         {% endif %}
+
+    {% endblock %}
+
+    {%  block scripts %}
+
+        <script src="/scripts/search-results.js"></script>
 
     {% endblock %}

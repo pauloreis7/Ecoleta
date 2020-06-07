@@ -1,13 +1,20 @@
+
+body {
+    background-color: white;
+}
+
 body::after {
     content: "";
     
-    background-color: white;
+    background-color: var(--background-color);
 
-    position: fixed;
-    top: 250px;
+    position: absolute;
+    top: 0;
     bottom: 0;
     left: 0;
     right: 0;
+
+    height: 16rem;
 
     z-index: -1;
 }
@@ -59,11 +66,7 @@ body::after {
 #page-search-results .cards {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 24px;
-}
-
-#page-search-results .card {
-    border-radius: 0 0 8px 8px;
+    gap: 32px;
 }
 
 #page-search-results .card img {
@@ -99,4 +102,62 @@ body::after {
     font-size: 16px;
     line-height: 26px;
     color: #6c6c80;
+}
+
+#page-search-results .edit_content {
+    width: 90%;
+
+    margin: 16px auto 0;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#page-search-results .edit_content a {
+    display: flex;
+    align-items: center;
+
+    font-weight: bold;
+    color: var(--title-color);
+
+    transition: 250ms;
+}
+
+#page-search-results .edit_content a:first-child span {
+    background-image: url(../assets/edit.png);
+
+    display: inline-block;
+
+    width: 20px;
+    height: 20px;
+
+    margin-right: 4px;
+}
+
+#page-search-results .edit_content a:first-child:hover span {
+    background-image: url(../assets/edit_active.png);
+}
+
+#page-search-results .edit_content a:last-child span {
+    background-image: url(../assets/delete.png);
+
+    display: inline-block;
+
+    width: 20px;
+    height: 20px;
+
+    margin-left: 4px;
+}
+
+#page-search-results .edit_content a:first-child:hover {
+    color: #34CB79;
+}
+
+#page-search-results .edit_content a:last-child:hover span {
+    background-image: url(../assets/delete_active.png);
+}
+
+#page-search-results .edit_content a:last-child:hover {
+    color: #f12d2d;
 }

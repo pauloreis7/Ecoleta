@@ -33,6 +33,11 @@
         grid-template-columns: 1fr 1fr;
     }
 
+    #page-search-results .edit_content img {
+        width: 20px;
+        max-height: 20px;
+    }
+
     #page-search-results .cards img {
         height: 250px;
     }
@@ -56,8 +61,17 @@
     }
 
     #page-search-results .card {
-        border-bottom: 1px solid #261b3d73;
+        border-bottom: 1px solid #28203a44;
         padding-bottom: 16px;
+    }
+
+    #page-search-results .card:last-child {
+        border: none;
+    }
+
+    #page-search-results .edit_content img{
+        width: 20px;
+        height: 20px;
     }
 }
 

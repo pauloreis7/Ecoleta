@@ -104,6 +104,17 @@ body::after {
     color: #6c6c80;
 }
 
+#page-search-results .card a {
+    color: var(--title-color);
+}
+
+#page-search-results .card a:hover {
+    font-weight: bold;
+    color: var(--primary-color);
+
+    transition: 250ms;
+}
+
 #page-search-results .edit_content {
     width: 90%;
 
@@ -114,7 +125,7 @@ body::after {
     align-items: center;
 }
 
-#page-search-results .edit_content a {
+#page-search-results .edit_content form {
     display: flex;
     align-items: center;
 
@@ -135,11 +146,30 @@ body::after {
     margin-right: 4px;
 }
 
+#page-search-results .edit_content form button,
+#page-search-results .edit_content a {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+
+    font-weight: bold;
+    color: var(--title-color);
+    background-color: rgba(0, 0, 0, 0);
+    font-size: 16px;
+    cursor: pointer;
+    outline: none;
+}
+
 #page-search-results .edit_content a:first-child:hover span {
     background-image: url(../assets/edit_active.png);
 }
 
-#page-search-results .edit_content a:last-child span {
+#page-search-results .edit_content a:first-child button:hover {
+    color: #34CB79;
+}
+
+#page-search-results .edit_content form:last-child span {
     background-image: url(../assets/delete.png);
 
     display: inline-block;
@@ -150,14 +180,11 @@ body::after {
     margin-left: 4px;
 }
 
-#page-search-results .edit_content a:first-child:hover {
-    color: #34CB79;
-}
-
-#page-search-results .edit_content a:last-child:hover span {
+#page-search-results .edit_content form:last-child:hover span {
     background-image: url(../assets/delete_active.png);
 }
 
-#page-search-results .edit_content a:last-child:hover {
+#page-search-results .edit_content form:last-child button:hover {
     color: #f12d2d;
 }
+

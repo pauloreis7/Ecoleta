@@ -11,9 +11,26 @@
 </section>
 
 <script>
-    
-    setTimeout(() => {
-        window.location = "/"
-    }, 2000)
+    const modalTitle = document.querySelector("#modal h1")
+    const currentLocal = window.location.pathname
 
+    if (window.location.pathname == "/delete") {
+
+        modalTitle.textContent = "Local Deletado"
+
+        setTimeout(() => {
+            window.location = "/search?search="
+        }, 2000)
+
+    }
+
+    if (window.location.pathname == "/edited") {
+        
+        modalTitle.textContent = "Local editado com sucesso"
+    }
+
+      setTimeout(() => {
+          window.location = "/"
+      }, 2000) 
+    
 </script>

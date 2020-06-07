@@ -17,6 +17,15 @@ routes.get("/create", controller.create)
 routes.post("/savepoint", controller.post)
 
 //Pesquisar ponto
-routes.get("/search", controller.serach)
+routes.get("/search", controller.search)
+
+//Deletear ponto
+routes.post("/delete", controller.delete)
+
+//Página editar ponto
+routes.get("/edit/:id", controller.edit)
+
+//Editar Ponto
+routes.post("/edited/:id", controller.put)
 
 module.exports = routes

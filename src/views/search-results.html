@@ -11,6 +11,7 @@
     {% block styles %}
 
         <link rel="stylesheet" href="/styles/search-results.css">
+        <link rel="stylesheet" href="/styles/modal.css">
 
     {% endblock %}
     
@@ -28,6 +29,8 @@
 
                     {% for place in places %}
 
+                        {% set placeCity = "{{ place.city }}" %}
+                    
                         <article class="card">
 
                             <img src="{{ place.image }}" alt="{{ place.name }}">
@@ -38,21 +41,30 @@
                             
                             <p>
                                 {{ place.city }}, {{ place.state }} <br />
-                                {{ place.adress }} <br />
+                                <a href="https://www.google.com.br/maps/place/{{ place.adress }}" target="_blank">{{ place.adress }}</a> <br />
                                 Número {{ place.adress2 }}
                             </p>
 
                             <div class="edit_content">
 
-                                <a href="/edit">
+                                <a href="/edit/{{ place.id }}">  
+
                                     <span></span>
-                                    Editar local
+                                    Editar Local
+                                    
                                 </a>
 
-                                <a href="/delete">
-                                    Deletar
-                                    <span></span>
-                                </a>
+                                <form action="/delete" method="POST" id="deleteButton">                        
+                                    <button type="submit">
+                                        
+                                        Deletar
+                                        <span></span>
+                                    
+                                    </button>
+                                    
+                                    <input type="hidden" name="id" value={{ place.id }}>
+                                       
+                                </form>
 
                             </div>
 
@@ -67,6 +79,22 @@
         {% else %}
 
             <h4><strong>Nenhum</strong> ponto de coleta encontrado :(</h4>
+
+        {% endif %}
+
+    {% endblock %}
+
+    {% block modal %}
+
+        {% if deleteTrue %}
+        
+            {% include "partials/point-created.html" %}
+
+        {% endif %}
+
+        {% if deleteTrue == false %}
+        
+            {% include "partials/point-failed.html" %}
 
         {% endif %}
 

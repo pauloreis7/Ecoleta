@@ -1,10 +1,12 @@
 {% extends "layout.html" %}
 
+{% set editPage = true %}
+
     {% set pageId = "page-create-point" %}
 
     {% block title %}
 
-        <title>Criar ponto de coleta</title>
+        <title>Editar ponto de coleta</title>
 
     {% endblock %}
 
@@ -19,9 +21,9 @@
 
         {% include "partials/page-header.html" %}
 
-        <form action="/savepoint" method="post">
+        <form action="/edited/{{ point.id }}" method="post">
 
-            <h1>Cadastro de um novo ponto de coleta</h1>
+            <h1>Editar ponto de coleta</h1>
             
             <fieldset>
 
@@ -29,7 +31,7 @@
 
                 {% include "partials/fields.html" %}
 
-            <button>Cadastrar ponto de coleta</button>
+            <button>Editar ponto de coleta</button>
 
         </form>
 
@@ -37,13 +39,13 @@
 
     {% block modal %}
 
-        {% if saved %}
+        {% if editTrue %}
         
             {% include "partials/point-created.html" %}
 
         {% endif %}
 
-        {% if saved == false %}
+        {% if editTrue == false %}
         
             {% include "partials/point-failed.html" %}
 
@@ -53,6 +55,7 @@
 
     {% block scripts %}
 
+        <script src="/scripts/edit-point.js"></script>
         <script src="/scripts/create-point.js"></script>
-    
+        
     {% endblock %}

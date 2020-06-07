@@ -12,8 +12,24 @@
 
 <script>
     
-     setTimeout(() => {
-         window.location = "/create"
-     }, 2000)
+    const modalTitle = document.querySelector("#modal h1")
+
+    if (window.location.pathname == "/delete") {
+
+       modalTitle.textContent = "Falha ao Deletar"
+
+       setTimeout(() => {
+            window.location = "/"
+       }, 2000)
+
+    } else {
+
+        setTimeout(() => {
+            window.location = "/create"
+        }, 2000) 
+        
+    }
+
+    
 
 </script>

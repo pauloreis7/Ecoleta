@@ -1,6 +1,6 @@
 //Importar o sqlite3
 
-const sqlite3 = require('sqlite3').verbose()
+const sqlite3 = require('c').verbose()
 
 //Craiar o objeto que irá fazer alterações no banco de dados
 
@@ -11,18 +11,18 @@ module.exports = db
  db.serialize(()=> {
 
 //     //Criar uma tabela
-//     db.run(`
-//         CREATE TABLE IF NOT EXISTS places (
-//             id INTEGER PRIMARY KEY AUTOINCREMENT,
-//             image TEXT,
-//             name TEXT,
-//             adress TEXT,
-//             adress2 TEXT,
-//             state TEXT,
-//             city TEXT,
-//             items TEXT
-//         );
-//     `)
+    db.run(`
+        CREATE TABLE IF NOT EXISTS places (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            image TEXT,
+            name TEXT,
+            adress TEXT,
+            adress2 TEXT,
+            state TEXT,
+            city TEXT,
+            items TEXT
+        );
+    `)
 
 //     //Inserir dados na tabela
 //     const query = `

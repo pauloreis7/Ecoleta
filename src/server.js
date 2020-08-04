@@ -23,7 +23,5 @@ nunjucks.configure ("src/views", {
     watch: true
 })
 
-
-
 //Ligar servidor
 server.listen(3000)
